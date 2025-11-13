@@ -44,7 +44,9 @@ export const NavBar = ({ links }: NavBarProps) => {
 
         <div className="flex items-center">
           <LanguageSwitcher />
-          <Button variant="primary" onClick={clickButton} children={"Donate"} />
+          <Button variant="primary" onClick={clickButton}>
+            Donate
+          </Button>
           <button
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary rounded-lg md:hidden hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-secondary-dark"

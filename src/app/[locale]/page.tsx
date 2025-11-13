@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-// import { Button } from "./components/ui/Button/Button";
+import { Button } from "./components/ui/Button";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -22,16 +22,12 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col items-center justify-center md:flex-row gap-4">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
-              {/* <Button
-                variant="secondary"
-                onClick={clickButton}
-                children={"Donate Now"}
-              />
-              <Button
-                variant="primary"
-                href="treatments"
-                children={"Get Involved"}
-              /> */}
+              <Button variant="secondary" onClick={clickButton}>
+                Donate Now
+              </Button>
+              <Button variant="primary" href="getinvolved">
+                Get Involved
+              </Button>
             </div>
           </div>
         </div>
@@ -100,11 +96,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center mb-0">
-            {/* <Button
-              variant="primary"
-              href="/getinvolved"
-              children={"Get Involved Today"}
-            /> */}
+            <Button variant="primary" href="/getinvolved">
+              Get Involved Today
+            </Button>
           </div>
         </div>
       </section>
@@ -135,11 +129,9 @@ export default function HomePage() {
                 creature is valued.
               </p>
               <div className="flex flex-col items-center justify-center md:flex-row gap-4 mt-2">
-                {/* <Button
-                  variant="secondary"
-                  href="treatments"
-                  children={"Read Our Story"}
-                /> */}
+                <Button variant="secondary" href="treatments">
+                  Read Our Story
+                </Button>
               </div>
             </div>
             <div className="flex-1 relative w-full h-96">
@@ -201,16 +193,12 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col items-center justify-center md:flex-row gap-4">
           <div className="flex flex-col md:flex-row gap-4 mt-2">
-            {/* <Button
-              variant="primary"
-              href="animals"
-              children={"Meet the Residents"}
-            />
-            <Button
-              variant="primary"
-              href="treatments"
-              children={"Learn About Adopting"}
-            /> */}
+            <Button variant="primary" href="animals">
+              Meet the Residents
+            </Button>
+            <Button variant="primary" href="treatments">
+              Learn About Adopting
+            </Button>
           </div>
         </div>
       </section>
