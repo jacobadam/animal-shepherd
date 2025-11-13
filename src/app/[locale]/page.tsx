@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+
 import { useTranslations } from "next-intl";
 
 import { Button } from "./components/ui/Button";
+import { Card } from "./components/ui/Card";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -157,39 +159,30 @@ export default function HomePage() {
             Animal Shepherd.
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-8 mb-5">
-          <div className="relative w-full h-56">
-            <Image
-              src="/goodboy2.jpg"
-              fill
-              alt="Haircut"
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative w-full h-56">
-            <Image
-              src="/goodboy1.jpg"
-              fill
-              alt="Haircut"
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative w-full h-56">
-            <Image
-              src="/goodboy3.jpg"
-              fill
-              alt="Haircut"
-              className="object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative w-full h-56">
-            <Image
-              src="/goodboy4.jpg"
-              fill
-              alt="Haircut"
-              className="object-cover rounded-lg"
-            />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-5">
+          <Card
+            image="/goodboy1.jpg"
+            title="Good Girl"
+            description="A friendly cat at our sanctuary."
+          />
+
+          <Card
+            image="/goodboy2.jpg"
+            title="Good Boy 1"
+            description="A friendly dog at our sanctuary."
+          />
+
+          <Card
+            image="/goodboy3.jpg"
+            title="Good Boy 2"
+            description="A friendly dog at our sanctuary."
+          />
+
+          <Card
+            image="/goodboy4.jpg"
+            title="Family Shot"
+            description="All the dogs at our sanctuary."
+          />
         </div>
         <div className="flex flex-col items-center justify-center md:flex-row gap-4">
           <div className="flex flex-col md:flex-row gap-4 mt-2">
