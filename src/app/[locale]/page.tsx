@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 import { Button } from "./components/ui/Button";
 import { Card } from "./components/ui/Card";
+import { CarouselDemo } from "./components/ui/Carousel";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -15,7 +16,7 @@ export default function HomePage() {
   return (
     <div className="relative min-h-screen w-full pt-16 bg-primary">
       <section className="flex flex-col md:flex-row items-center justify-between py-8 md:py-28 gap-8 px-20">
-        <div className="flex-1">
+        <div className="md:flex-1">
           <h1 className="text-secondary-dark font-bold text-6xl leading-tight my-4 pr-0 md:pr-5 max-sm:break-all text-center">
             {t("title")}
           </h1>
@@ -33,7 +34,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="flex-1 justify-center items-center">
+        <div className="md:flex-1 justify-center items-center">
           <div className="relative w-full h-96">
             <Image
               src="/goodboy6.jpg"
@@ -56,8 +57,8 @@ export default function HomePage() {
             abandoned, injured, and neglected while promoting education,
             adoption, and sustainable living.
           </p>
-          <div className="flex flex-row gap-8 mb-5">
-            <div className="flex flex-col justify-center items-center p-4 bg-primary rounded-lg shadow-md">
+          <div className="flex flex-col md:flex-row gap-8 mb-5">
+            <div className="flex flex-col justify-center items-center p-4 w-72 bg-primary rounded-lg shadow-md">
               <Image
                 src="/paw.svg"
                 alt="heart icon"
@@ -70,7 +71,7 @@ export default function HomePage() {
               </p>
               <p className="text-secondary">animals rescued annually</p>
             </div>
-            <div className="flex flex-col justify-center items-center p-4 bg-primary rounded-lg shadow-md">
+            <div className="flex flex-col justify-center items-center p-4 w-72 bg-primary rounded-lg shadow-md">
               <Image
                 src="/heart.svg"
                 alt="heart icon"
@@ -85,7 +86,7 @@ export default function HomePage() {
                 dogs and cats cared for every day
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center p-4 bg-primary rounded-lg shadow-md">
+            <div className="flex flex-col justify-center items-center p-4 w-72 bg-primary rounded-lg shadow-md">
               <Image
                 src="/healthcare.svg"
                 alt="heart icon"
@@ -110,8 +111,8 @@ export default function HomePage() {
           <h1 className="text-3xl font-bold mb-5 text-center text-secondary-dark">
             Our Work
           </h1>
-          <div className="flex flex-row justify-center gap-8">
-            <div className="flex-1 flex flex-col justify-center items-center">
+          <div className="flex flex-col md:flex-row justify-center gap-8">
+            <div className="md:flex-1 flex flex-col justify-center items-center">
               <p className="max-w-prose text-center text-secondary mb-4">
                 Animal Shepherd is a non-profit, no-kill organization founded on
                 the belief that every life is precious. We rescue, rehabilitate,
@@ -136,7 +137,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="flex-1 relative w-full h-96">
+            <div className="md:flex-1 relative w-full h-96">
               <Image
                 src="/goodboy4.jpg"
                 fill
@@ -160,29 +161,13 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-5">
-          <Card
-            image="/goodboy1.jpg"
-            title="Good Girl"
-            description="A friendly cat at our sanctuary."
-          />
+          <Card image="/goodboy1.jpg" alt="Good Girl" />
 
-          <Card
-            image="/goodboy2.jpg"
-            title="Good Boy 1"
-            description="A friendly dog at our sanctuary."
-          />
+          <Card image="/goodboy2.jpg" alt="Good Boy 1" />
 
-          <Card
-            image="/goodboy3.jpg"
-            title="Good Boy 2"
-            description="A friendly dog at our sanctuary."
-          />
+          <Card image="/goodboy3.jpg" alt="Good Boy 2" />
 
-          <Card
-            image="/goodboy4.jpg"
-            title="Family Shot"
-            description="All the dogs at our sanctuary."
-          />
+          <Card image="/goodboy4.jpg" alt="Family Shot" />
         </div>
         <div className="flex flex-col items-center justify-center md:flex-row gap-4">
           <div className="flex flex-col md:flex-row gap-4 mt-2">
@@ -193,6 +178,24 @@ export default function HomePage() {
               Learn About Adopting
             </Button>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-primary p-8">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-3xl font-bold mb-5 text-center leading-tight text-secondary-dark">
+            Tips for caring for your pets
+          </h1>
+          <p className="max-w-4xl text-center mb-5 text-shadow-primary text-secondary">
+            Good care starts with simple daily habits that build trust,
+            confidence, and wellbeing. Our sanctuary team has gathered practical
+            guidance to help you keep your pets healthy, active, and emotionally
+            supported. These easy tips are designed for real life and can make a
+            meaningful difference in your pet&apos;s day-to-day happiness.
+          </p>
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <CarouselDemo />
         </div>
       </section>
     </div>
