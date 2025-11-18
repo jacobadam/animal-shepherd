@@ -15,9 +15,9 @@ export default function HomePage() {
   };
   return (
     <div className="relative min-h-screen w-full pt-16 bg-primary">
-      <section className="flex flex-col md:flex-row items-center justify-between py-8 md:py-28 gap-8 px-20">
+      <section className="flex flex-col md:flex-row items-center justify-between py-8 md:py-28 gap-8 px-4 md:px-20">
         <div className="md:flex-1">
-          <h1 className="text-secondary-dark font-bold text-6xl leading-tight my-4 pr-0 md:pr-5 max-sm:break-all text-center">
+          <h1 className="text-secondary-dark font-bold text-3xl md:text-6xl leading-tight my-4 pr-0 md:pr-5 max-sm:break-all text-center">
             {t("title")}
           </h1>
           <p className="text-secondary text-m font-normal mb-8 text-center">
@@ -181,7 +181,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-primary p-8">
+      <section className="bg-primary p-16 md:p-8">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl font-bold mb-5 text-center leading-tight text-secondary-dark">
             Tips for caring for your pets
