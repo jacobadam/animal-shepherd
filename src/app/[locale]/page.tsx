@@ -64,7 +64,7 @@ export default function HomePage() {
                 alt="heart icon"
                 width={8}
                 height={8}
-                className="flex h-10 w-10 items-center justify-center mb-2"
+                className="flex h-10 w-10 items-center justify-center m-2"
               />
               <p className="font-bold mb-2 text-3xl text-secondary-dark">
                 400+
@@ -92,9 +92,9 @@ export default function HomePage() {
                 alt="heart icon"
                 width={8}
                 height={8}
-                className="flex h-10 w-10 items-center justify-center mb-2"
+                className="flex h-10 w-10 items-center justify-center m-2"
               />
-              <p className="font-bold m-2 text-3xl">24/7</p>
+              <p className="font-bold mb-2 text-3xl">24/7</p>
               <p className="text-secondary">emergency rescue service</p>
             </div>
           </div>
