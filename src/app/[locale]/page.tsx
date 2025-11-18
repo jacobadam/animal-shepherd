@@ -181,7 +181,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-primary p-16 md:p-8">
+      <section className="bg-primary p-16 md:py-8">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl font-bold mb-5 text-center leading-tight text-secondary-dark">
             Tips for caring for your pets
