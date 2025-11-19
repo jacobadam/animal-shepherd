@@ -151,7 +151,7 @@ export default function HomePage() {
 
       <section className="bg-secondary p-8">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-3xl font-bold mb-5 text-center leading-tight text-primary">
+          <h1 className="text-3xl font-bold mb-5 text-center text-primary">
             Meet our animals
           </h1>
           <p className="max-w-4xl text-center mb-5 text-shadow-primary text-primary">
