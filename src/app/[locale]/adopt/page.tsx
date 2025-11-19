@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import { Button } from "../components/ui/Button";
+import { Card } from "../components/ui/Card";
 
 export default function Adopt() {
   const clickButton = () => {
@@ -37,7 +38,7 @@ export default function Adopt() {
         </div>
       </section>
       <section className="flex flex-col items-center justify-center px-8">
-        <h1 className="text-2xl font-semibold my-4">
+        <h1 className="text-2xl font-semibold mb-4">
           How the Adoption Process Works
         </h1>
         <div className="flex flex-row items-center justify-center gap-8 my-4">
@@ -80,6 +81,38 @@ export default function Adopt() {
               welcome your new pet home.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="bg-secondary p-8">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-primary text-2xl font-semibold mb-4">
+            Meet a few adoptable pets at our sanctuary:
+          </h1>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+          <Card image="/dog-20.webp" alt="Dog sitting" />
+
+          <Card image="/cat-01.webp" alt="Cat looking" />
+
+          <Card image="/dog-26.webp" alt="Dog posing" />
+
+          <Card image="/cat-03.webp" alt="Cat relaxing" />
+
+          <Card image="/dog-42.webp" alt="Dog relaxing" />
+
+          <Card image="/dog-27.webp" alt="Dog relaxing" />
+
+          <Card image="/cat-17.webp" alt="Cat relaxing" />
+
+          <Card image="/dog-36.webp" alt="Dog relaxing" />
+
+          <Card image="/cat-02.webp" alt="Cat relaxing" />
+
+          <Card image="/dog-06.webp" alt="Dog relaxing" />
+
+          <Card image="/cat-18.webp" alt="Cat relaxing" />
+
+          <Card image="/dog-49.webp" alt="Dog relaxing" />
         </div>
       </section>
     </div>
