@@ -7,7 +7,7 @@ import { Button } from "./ui/Button";
 import { LanguageSwitcher } from "../components/LangToggle";
 
 interface NavBarProps {
-  links?: { label: string; href: string }[];
+  links: { label: string; href: string }[];
 }
 
 export const NavBar = ({ links }: NavBarProps) => {
@@ -26,9 +26,9 @@ export const NavBar = ({ links }: NavBarProps) => {
           </div>
         </Link>
 
-        <nav className="items-center justify-between hidden w-full md:flex md:w-auto">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-secondary-dark rounded-lg md:flex-row md:mt-0 md:border-0 gap-4">
-            {links?.map((link) => (
+        <nav className="hidden md:block">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-secondary-dark md:flex-row md:mt-0 md:border-0 gap-4">
+            {links.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
