@@ -82,7 +82,7 @@ export const Footer = ({ links }: FooterProps) => {
 
       <div className="flex flex-row justify-center items-center">
         <p className="text-center md:text-left text-sm">
-          &copy; {currentYear}
+          &copy; {currentYear}{" "}
           <Link
             href="https://www.greenhousewebdesigns.com/"
             target="_blank"
