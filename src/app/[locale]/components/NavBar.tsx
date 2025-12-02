@@ -21,7 +21,12 @@ export const NavBar = ({ links }: NavBarProps) => {
         <Link href="/" className="flex items-start">
           <div className="md:px-8 py-3">
             <div className="relative h-12 w-12">
-              <Image src="/logo.jpg" fill priority alt="Logo desktop"></Image>
+              <Image
+                src="/animal-shepherd-logo.jpg"
+                fill
+                priority
+                alt="Logo Nav"
+              ></Image>
             </div>
           </div>
         </Link>
