@@ -78,7 +78,7 @@ export const Footer = ({ links }: FooterProps) => {
         ></Image>
       </div>
 
-      <div className="flex flex-row justify-center items-center">
+      <div className="flex flex-row justify-center items-center pb-2">
         <p className="text-center md:text-left text-sm">
           &copy; {currentYear}{" "}
           <Link
