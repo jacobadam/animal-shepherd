@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { Button } from "../components/ui/Button";
-import { Card } from "../components/ui/Card";
+import { AnimalCard } from "../components/ui/AnimalCard";
 
 export default function Adopt() {
   const clickButton = () => {
@@ -11,7 +11,7 @@ export default function Adopt() {
   };
   return (
     <div className="relative min-h-screen w-full pt-16 bg-primary">
-      <section className="flex flex-col items-center justify-center px-8 mb-4">
+      <section className="flex flex-col items-center justify-center px-4 md:px-20">
         <div className="relative w-full h-96">
           <Image
             src="/dog-55.webp"
@@ -23,11 +23,13 @@ export default function Adopt() {
         <h1 className="text-secondary-dark font-bold text-3xl md:text-5xl my-4 text-center">
           Adopt and Change a Life
         </h1>
-        <p className="text-secondary text-md font-normal mb-4 text-center">
-          Interested in adopting a dog, a cat or a pair of kitties? We&apos;d
-          love to talk to you!
+        <p className="text-secondary text-md font-normal mb-4 text-center px-4 md:px-40">
+          Our sanctuary believes every animal deserves security, compassion, and
+          a place to thrive. This page explains how our adoption process works
+          and what you can expect when you begin your journey toward welcoming a
+          new companion.
         </p>
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row justify-center items-center mb-4">
           <Button variant="secondary" onClick={clickButton}>
             Apply to Adopt
           </Button>
@@ -37,7 +39,7 @@ export default function Adopt() {
         <h1 className="text-secondary-dark text-2xl font-semibold mb-4">
           About Adopting
         </h1>
-        <p className="text-secondary text-md font-normal mb-4 text-center">
+        <p className="text-secondary text-md font-normal mb-4 text-center px-4 md:px-40">
           We are committed to helping you find the right dog, cat or kitten for
           your family situation. You can download our application and contract
           here on the website. We have all our dogs, cats and kittens listed
@@ -93,36 +95,36 @@ export default function Adopt() {
           </div>
         </div>
       </section>
-      <section className="bg-secondary p-8 mb-4">
+      <section className="bg-secondary p-8">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-primary text-2xl font-semibold mb-4">
             Meet a few adoptable pets at our sanctuary:
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
-          <Card image="/dog-24.webp" alt="Dog sitting" />
+          <AnimalCard src="/dog-24.webp" alt="Dog sitting" />
 
-          <Card image="/cat-04.webp" alt="Cat looking" />
+          <AnimalCard src="/cat-04.webp" alt="Cat looking" />
 
-          <Card image="/dog-28.webp" alt="Dog posing" />
+          <AnimalCard src="/dog-28.webp" alt="Dog posing" />
 
-          <Card image="/cat-06.webp" alt="Cat relaxing" />
+          <AnimalCard src="/cat-06.webp" alt="Cat relaxing" />
 
-          <Card image="/dog-45.webp" alt="Dog relaxing" />
+          <AnimalCard src="/dog-45.webp" alt="Dog relaxing" />
 
-          <Card image="/dog-27.webp" alt="Dog relaxing" />
+          <AnimalCard src="/dog-27.webp" alt="Dog relaxing" />
 
-          <Card image="/cat-17.webp" alt="Cat relaxing" />
+          <AnimalCard src="/cat-17.webp" alt="Cat relaxing" />
 
-          <Card image="/dog-39.webp" alt="Dog relaxing" />
+          <AnimalCard src="/dog-39.webp" alt="Dog relaxing" />
 
-          <Card image="/cat-12.webp" alt="Cat relaxing" />
+          <AnimalCard src="/cat-12.webp" alt="Cat relaxing" />
 
-          <Card image="/dog-47.webp" alt="Dog relaxing" />
+          <AnimalCard src="/dog-47.webp" alt="Dog relaxing" />
 
-          <Card image="/cat-18.webp" alt="Cat relaxing" />
+          <AnimalCard src="/cat-18.webp" alt="Cat relaxing" />
 
-          <Card image="/dog-65.webp" alt="Dog relaxing" />
+          <AnimalCard src="/dog-65.webp" alt="Dog relaxing" />
         </div>
       </section>
     </div>
