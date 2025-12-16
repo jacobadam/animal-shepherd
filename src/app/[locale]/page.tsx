@@ -11,11 +11,15 @@ import { TipCard } from "./components/ui/TipCard";
 
 import { getTipsData } from "@/lib/getTipsData";
 
+import { lookupTable } from "@/lib/createTipsLookup";
+
 export default function HomePage() {
   const home = useTranslations("HomePage");
   const tips = useTranslations("Tips");
 
   const tipsArray = getTipsData(tips);
+
+  const TipsCardData = lookupTable(tipsArray, tipCards);
 
   return (
     <div className="relative min-h-screen w-full pt-16 bg-primary">
@@ -197,8 +201,17 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col justify-center items-center">
           <CarouselContainer
-            items={tipCards}
-            renderItem={(item) => <TipCard src={item.src} alt={item.alt} />}
+            items={TipsCardData}
+            renderItem={(item) => (
+              <TipCard
+                id={item.id}
+                heading={item.heading}
+                title={item.title}
+                body={item.body}
+                src={item.src}
+                alt={item.alt}
+              />
+            )}
           />
         </div>
       </section>
