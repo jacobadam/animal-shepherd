@@ -2,9 +2,12 @@
 
 @theme {
   --color-primary: #e9e4d3;
+  --color-primary-dark: #bfbcae;
   --color-secondary: #356859;
   --color-secondary-hover: #024c37;
   --color-secondary-dark: #083d2d;
+
+  --color-parchment: #f6f3ec;
 
   --color-text: #1e293b;
   --color-muted: #334155;
