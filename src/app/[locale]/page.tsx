@@ -22,7 +22,7 @@ export default function HomePage() {
   const TipsCardData = lookupTable(tipsArray, tipCards);
 
   return (
-    <div className="relative min-h-screen w-full pt-16 bg-primary">
+    <div className="relative min-h-screen w-full bg-primary">
       <section className="flex flex-col md:flex-row items-center justify-between py-8 md:py-28 gap-8 px-4 md:px-20">
         <div className="md:flex-1">
           <h1 className="text-secondary-dark font-bold text-3xl md:text-6xl my-4 pr-0 md:pr-5 text-center">
