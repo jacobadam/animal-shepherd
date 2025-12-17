@@ -8,7 +8,7 @@ interface FooterProps {
 export const Footer = ({ links }: FooterProps) => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="w-full bg-secondary py-12">
+    <footer className="w-full bg-secondary py-10">
       <div className="max-w-3xl mx-auto flex justify-center items-center mb-8">
         <Link href="/" className="flex items-start">
           <div className="relative h-12 w-12">
@@ -42,7 +42,7 @@ export const Footer = ({ links }: FooterProps) => {
           <Link
             href="mailto:info@animalshepherd.org"
             aria-label="Email Animal Shepherd"
-            className="opacity-80 hover:opacity-100 transition-opacity"
+            className="opacity-70 hover:opacity-100 transition-opacity"
           >
             <Image src="/email-icon.svg" alt="" height={24} width={24} />
           </Link>
@@ -54,7 +54,7 @@ export const Footer = ({ links }: FooterProps) => {
             aria-label="Animal Shepherd on Instagram"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-80 hover:opacity-100 transition-opacity"
+            className="opacity-70 hover:opacity-100 transition-opacity"
           >
             <Image src="/instagram-icon.svg" alt="" height={24} width={24} />
           </Link>
@@ -66,7 +66,7 @@ export const Footer = ({ links }: FooterProps) => {
             aria-label="Animal Shepherd on LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-80 hover:opacity-100 transition-opacity"
+            className="opacity-70 hover:opacity-100 transition-opacity"
           >
             <Image src="/linkedin-icon.svg" alt="" height={24} width={24} />
           </Link>
@@ -78,7 +78,7 @@ export const Footer = ({ links }: FooterProps) => {
             aria-label="Donate via PayPal"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-80 hover:opacity-100 transition-opacity"
+            className="opacity-70 hover:opacity-100 transition-opacity"
           >
             <Image src="/paypal-icon.svg" alt="" height={24} width={24} />
           </Link>
@@ -90,7 +90,7 @@ export const Footer = ({ links }: FooterProps) => {
             aria-label="Contact Animal Shepherd on WhatsApp"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-80 hover:opacity-100 transition-opacity"
+            className="opacity-70 hover:opacity-100 transition-opacity"
           >
             <Image src="/whatsapp-icon.svg" alt="" height={24} width={24} />
           </Link>
