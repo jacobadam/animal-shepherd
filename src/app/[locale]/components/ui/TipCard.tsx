@@ -11,7 +11,7 @@ type TipCardProps = {
 
 export const TipCard = ({ title, heading, body, src, alt }: TipCardProps) => {
   return (
-    <div className="w-full rounded-2xl bg-parchment border border-black/15 p-6 flex flex-col">
+    <div className="flex flex-col h-full w-full rounded-2xl bg-parchment border border-black/15 p-6">
       <div className="flex flex-col items-center justify-center text-center">
         <span className="text-sm font-medium text-secondary-dark opacity-80">
           {title}
@@ -21,7 +21,7 @@ export const TipCard = ({ title, heading, body, src, alt }: TipCardProps) => {
         </h3>
       </div>
 
-      <div className="my-6 flex justify-center h-full relative">
+      <div className="flex justify-center relative">
         <div className="relative w-full h-72">
           <Image src={src} alt={alt} fill className="object-contain" />
         </div>
