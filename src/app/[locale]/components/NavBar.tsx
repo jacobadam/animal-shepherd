@@ -17,8 +17,8 @@ export const NavBar = ({ links }: NavBarProps) => {
 
   return (
     <header className="bg-secondary fixed w-full z-20 top-0 left-0 border-b border-secondary-dark h-16">
-      <div className="max-w-7xl flex items-center justify-between h-full mx-auto px-4 xl:px-0">
-        <Link href="/" className="flex items-start">
+      <div className="max-w-7xl grid grid-cols-3 items-center h-full mx-auto px-4 xl:px-0">
+        <Link href="/" className="flex items-center justify-start">
           <div className="md:px-8 py-3">
             <div className="relative h-12 w-12">
               <Image
@@ -31,7 +31,7 @@ export const NavBar = ({ links }: NavBarProps) => {
           </div>
         </Link>
 
-        <nav className="hidden md:block">
+        <nav className="hidden md:flex justify-center">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-secondary-dark md:flex-row md:mt-0 md:border-0 gap-4">
             {links.map((link) => (
               <li key={link.label}>
@@ -47,7 +47,7 @@ export const NavBar = ({ links }: NavBarProps) => {
           </ul>
         </nav>
 
-        <div className="flex items-center">
+        <div className="flex items-center justify-end gap-4">
           <LanguageSwitcher />
           <Button variant="primary" onClick={clickButton}>
             Donate
