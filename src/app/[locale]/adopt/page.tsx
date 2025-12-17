@@ -30,7 +30,7 @@ export default function Adopt() {
           new companion.
         </p>
         <div className="flex flex-row justify-center items-center mb-4">
-          <Button variant="secondary" onClick={clickButton}>
+          <Button variant="secondary" href="/forms/contrato_de_adopción.pdf">
             Apply to Adopt
           </Button>
         </div>
