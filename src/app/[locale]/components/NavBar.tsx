@@ -47,11 +47,13 @@ export const NavBar = ({ links }: NavBarProps) => {
           </ul>
         </nav>
 
-        <div className="flex items-center justify-end gap-4 col-span-1 md:col-span-1">
+        <div className="flex items-center justify-end gap-0 md:gap-4 col-span-1 md:col-span-1">
           <LanguageSwitcher />
-          <Button variant="primary" onClick={clickButton}>
-            Donate
-          </Button>
+          <div className="hidden md:block">
+            <Button variant="primary" onClick={clickButton}>
+              Donate
+            </Button>
+          </div>
           <button
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary rounded-lg lg:hidden hover:bg-secondary-dark focus:outline-none focus:ring-2 focus:ring-secondary-dark"
