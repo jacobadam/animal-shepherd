@@ -15,207 +15,174 @@ export default function HomePage() {
   const tips = useTranslations("Tips");
 
   const tipsArray = getTipsData(tips);
-
   const TipsCardData = lookupTable(tipsArray, tipCards);
 
   return (
-    <main className="flex flex-col w-full bg-primary antialiased">
-      <section className="relative w-full overflow-hidden">
-        <div className="relative w-full aspect-4/5 md:h-[85vh]">
+    <div className="flex flex-col w-full bg-primary antialiased">
+      <section className="relative min-h-[600px] md:h-[85vh] w-full flex items-center justify-center overflow-hidden py-20 md:py-0">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/owner-dogs-30.webp"
             fill
             priority
             alt="Sanctuary residents"
             className="object-cover"
-            sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/55 z-10" />
-          <div className="absolute inset-0 z-20 flex items-center justify-center p-4">
-            <div className="w-full max-w-5xl text-center text-white">
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-                {home("title")}
-              </h1>
-              <p className="text-base sm:text-lg md:text-2xl font-medium mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
-                {home("paragraph")}
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
-                <Button variant="secondary">Donate Now</Button>
-                <Button variant="primary" href="/getinvolved">
-                  Get Involved
-                </Button>
-              </div>
-            </div>
-          </div>
+          <div className="absolute inset-0 bg-black/55" />
         </div>
-      </section>
 
-      <section className="bg-secondary px-6 md:px-12 lg:px-20 py-16">
-        <div className="flex flex-col justify-center items-center">
-          <h2 className="text-3xl font-bold mb-5 text-center text-primary">
-            Making a Difference Every day
-          </h2>
-          <p className="max-w-4xl text-center mb-5 text-shadow-primary text-primary">
-            Animal Shepherd is a no-kill, non-profit rescue and sanctuary for
-            dogs, cats, and farm animals. We provide lifelong care for the
-            abandoned, injured, and neglected while promoting education,
-            adoption, and sustainable living.
+        <div className="relative z-10 w-full max-w-5xl px-4 md:px-6 text-center text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+            {home("title")}
+          </h1>
+          <p className="text-base sm:text-lg md:text-2xl font-medium mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            {home("paragraph")}
           </p>
-          <div className="flex flex-col md:flex-row gap-8 mb-5 max-w-full">
-            <div className="flex flex-col justify-center items-center p-4 bg-primary rounded-lg shadow-md">
-              <Image
-                src="/paw.svg"
-                alt="heart icon"
-                width={8}
-                height={8}
-                className="flex h-10 w-10 items-center justify-center m-2"
-              />
-              <p className="font-bold mb-2 text-3xl text-secondary-dark">
-                400+
-              </p>
-              <p className="text-secondary">animals rescued annually</p>
-            </div>
-            <div className="flex flex-col justify-center items-center p-4 bg-primary rounded-lg shadow-md">
-              <Image
-                src="/heart.svg"
-                alt="heart icon"
-                width={8}
-                height={8}
-                className="flex h-10 w-10 items-center justify-center m-2"
-              />
-              <p className="font-bold mb-2 text-3xl text-secondary-dark">
-                100+
-              </p>
-              <p className="text-secondary">
-                dogs and cats cared for every day
-              </p>
-            </div>
-            <div className="flex flex-col justify-center items-center p-4 bg-primary rounded-lg shadow-md">
-              <Image
-                src="/healthcare.svg"
-                alt="heart icon"
-                width={8}
-                height={8}
-                className="flex h-10 w-10 items-center justify-center m-2"
-              />
-              <p className="font-bold mb-2 text-3xl">24/7</p>
-              <p className="text-secondary">emergency rescue service</p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center mb-0">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+            <Button variant="secondary">Donate Now</Button>
             <Button variant="primary" href="/getinvolved">
-              Get Involved Today
+              Get Involved
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="px-6 md:px-12 lg:px-20 py-16">
-        <div className="flex flex-col">
-          <h2 className="text-3xl font-bold mb-5 text-center text-secondary-dark">
-            Our Work
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center gap-8">
-            <div className="md:flex-1 flex flex-col justify-center items-center">
-              <div className="max-w-prose text-center text-secondary mb-4 space-y-6">
-                <p>
-                  Animal Shepherd is a non-profit, no-kill organization founded
-                  on the belief that every life is precious. We rescue,
-                  rehabilitate, and provide lifelong sanctuary for dogs, cats,
-                  and farm animals who have been abandoned, neglected, or
-                  injured. What began as a small effort to help the most
-                  vulnerable has grown into a safe, no-cage haven where animals
-                  can live freely, recover fully, and experience love without
-                  fear.
-                </p>
-                <p className="max-w-prose text-center text-secondary mb-4">
-                  Beyond rescue, Animal Shepherd is a community hub for
-                  education, advocacy, and sustainable living. We promote
-                  responsible pet care, adoption, and environmental stewardship
-                  through our programs in animal welfare, permaculture, and
-                  vegan living. From sanctuary care to public outreach, our
-                  mission is to protect animals, inspire compassion, and build a
-                  world where every creature is valued.
-                </p>
+      <section className="relative container mx-auto px-16 md:px-4 -mt-10 md:-mt-20">
+        <div className="max-w-6xl mx-auto bg-secondary px-6 py-12 md:py-16 rounded-3xl shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+            <div className="flex flex-col items-center text-center px-2">
+              <div className="bg-primary/20 p-3 rounded-full mb-4">
+                <Image
+                  src="/paw.svg"
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="h-8 w-8"
+                />
               </div>
-              <div className="flex flex-col items-center justify-center md:flex-row gap-4 mt-2">
-                <Button variant="secondary" href="about">
-                  Read Our Story
-                </Button>
-              </div>
+              <p className="text-3xl md:text-4xl font-black text-primary mb-1 tracking-tight">
+                400+
+              </p>
+              <p className="text-primary/80 font-semibold text-xs md:text-sm uppercase tracking-widest leading-tight">
+                rescuing annually
+              </p>
             </div>
-            <div className="md:flex-1 relative w-full h-96">
-              <Image
-                src="/owner-dog-02.webp"
-                fill
-                alt="Owner with dogs"
-                className="object-cover rounded-lg"
-              />
+
+            <div className="flex flex-col items-center text-center px-2">
+              <div className="bg-primary/20 p-3 rounded-full mb-4">
+                <Image
+                  src="/heart.svg"
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="h-8 w-8"
+                />
+              </div>
+              <p className="text-3xl md:text-4xl font-black text-primary mb-1 tracking-tight">
+                100+
+              </p>
+              <p className="text-primary/80 font-semibold text-xs md:text-sm uppercase tracking-widest leading-tight">
+                daily residents
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center text-center px-2">
+              <div className="bg-primary/20 p-3 rounded-full mb-4">
+                <Image
+                  src="/healthcare.svg"
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="h-8 w-8"
+                />
+              </div>
+              <p className="text-3xl md:text-4xl font-black text-primary mb-1 tracking-tight">
+                24/7
+              </p>
+              <p className="text-primary/80 font-semibold text-xs md:text-sm uppercase tracking-widest leading-tight">
+                emergency care
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-secondary px-6 md:px-12 lg:px-20 py-16">
-        <div className="flex flex-col justify-center items-center">
-          <h2 className="text-3xl font-bold mb-5 text-center text-primary">
-            Meet our animals
+      <section className="py-16 md:py-24 px-6 lg:px-20 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div className="space-y-6 md:space-y-8 text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark leading-tight">
+              Our Work
+            </h2>
+            <div className="text-secondary text-base md:text-lg space-y-6 leading-relaxed">
+              <p>
+                Animal Shepherd is a non-profit, no-kill organization founded on
+                the belief that every life is precious.
+              </p>
+              <p>
+                Our mission is to build a world where every creature is valued
+                through sanctuary care and education.
+              </p>
+            </div>
+            <div className="pt-2">
+              <Button variant="secondary" href="/about">
+                Read Our Story
+              </Button>
+            </div>
+          </div>
+          <div className="relative h-[300px] sm:h-[400px] md:h-[450px] w-full rounded-3xl overflow-hidden shadow-xl">
+            <Image
+              src="/owner-dog-02.webp"
+              fill
+              alt="Caregiver with animal"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-secondary/5 py-16 md:py-24 px-6 lg:px-20">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">
+            Meet Our Animals
           </h2>
-          <p className="max-w-4xl text-center mb-5 text-shadow-primary text-primary">
+          <p className="text-secondary text-base md:text-lg max-w-2xl mx-auto">
             Each animal at our sanctuary has a story. Some are healing, some are
-            thriving, and all are loved. Together, they make up the heart of
-            Animal Shepherd.
+            thriving, and all are loved.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-5">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto mb-12">
           <AnimalCard src="/dog-01.webp" alt="Dog sitting" />
-
           <AnimalCard src="/cat-04.webp" alt="Cat looking" />
-
           <AnimalCard src="/dog-22.webp" alt="Dog posing" />
           <AnimalCard src="/cat-06.webp" alt="Cat relaxing" />
         </div>
-        <div className="flex flex-col items-center justify-center md:flex-row gap-4">
-          <div className="flex flex-col md:flex-row gap-4 mt-2">
-            <Button variant="primary" href="adopt">
-              Meet the Residents
-            </Button>
-            <Button variant="primary" href="adopt">
-              Learn About Adopting
-            </Button>
-          </div>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-4 px-4">
+          <Button variant="primary" href="/adopt">
+            Meet the Residents
+          </Button>
         </div>
       </section>
 
-      <section className="bg-primary px-6 md:px-12 lg:px-20 py-16">
-        <div className="flex flex-col justify-center items-center">
-          <h2 className="text-3xl font-bold mb-5 text-center text-secondary-dark">
-            Tips for caring for your pets
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-20 overflow-hidden">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark mb-4">
+            Care Tips
           </h2>
-          <p className="max-w-4xl text-center mb-5 text-shadow-primary text-secondary">
-            Good care starts with simple daily habits that build trust,
-            confidence, and wellbeing. Our sanctuary team has gathered practical
-            guidance to help you keep your pets healthy, active, and emotionally
-            supported. These easy tips are designed for real life and can make a
-            meaningful difference in your pet&apos;s day-to-day happiness.
+          <p className="text-secondary text-base md:text-lg max-w-3xl mx-auto">
+            Practical guidance to help you build trust and wellbeing with your
+            pets.
           </p>
         </div>
+
         <div className="flex flex-col justify-center items-center">
           <CarouselContainer
             items={TipsCardData}
-            renderItem={(item) => (
-              <TipCard
-                id={item.id}
-                heading={item.heading}
-                title={item.title}
-                body={item.body}
-                src={item.src}
-                alt={item.alt}
-              />
-            )}
+            renderItem={(item) => <TipCard {...item} />}
           />
         </div>
       </section>
-    </main>
+    </div>
   );
 }
