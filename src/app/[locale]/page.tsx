@@ -19,31 +19,33 @@ export default function HomePage() {
   const TipsCardData = lookupTable(tipsArray, tipCards);
 
   return (
-    <div className="relative min-h-screen w-full bg-primary">
-      <section className="flex flex-col md:flex-row items-center justify-between py-8 md:py-28 gap-8 px-4 md:px-20">
-        <div className="md:flex-1 max-w-xl mx-auto md:mx-0">
-          <h1 className="text-secondary-dark font-bold text-3xl md:text-6xl my-4 pr-0 md:pr-5 text-center">
-            {home("title")}
-          </h1>
-          <p className="text-secondary text-md font-normal mb-8 text-center">
-            {home("paragraph")}
-          </p>
-
-          <div className="flex flex-row justify-center items-center gap-4 mb-0 md:mb-8">
-            <Button variant="secondary">Donate Now</Button>
-            <Button variant="primary" href="getinvolved">
-              Get Involved
-            </Button>
-          </div>
-        </div>
-        <div className="w-full md:flex-1 justify-center items-center">
-          <div className="relative w-full h-[40vh] md:h-[45vh]">
-            <Image
-              src="/owner-dog-27.webp"
-              fill
-              alt="Owner with dogs"
-              className="object-cover rounded-lg"
-            />
+    <main className="flex flex-col w-full bg-primary antialiased">
+      <section className="relative w-full overflow-hidden">
+        <div className="relative w-full aspect-4/5 md:h-[85vh]">
+          <Image
+            src="/owner-dogs-30.webp"
+            fill
+            priority
+            alt="Sanctuary residents"
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/55 z-10" />
+          <div className="absolute inset-0 z-20 flex items-center justify-center p-4">
+            <div className="w-full max-w-5xl text-center text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                {home("title")}
+              </h1>
+              <p className="text-base sm:text-lg md:text-2xl font-medium mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
+                {home("paragraph")}
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+                <Button variant="secondary">Donate Now</Button>
+                <Button variant="primary" href="/getinvolved">
+                  Get Involved
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -214,6 +216,6 @@ export default function HomePage() {
           />
         </div>
       </section>
-    </div>
+    </main>
   );
 }
