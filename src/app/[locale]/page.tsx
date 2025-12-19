@@ -39,7 +39,9 @@ export default function HomePage() {
             {home("paragraph")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
-            <Button variant="secondary">Donate Now</Button>
+            <Button variant="secondary" href="/donate">
+              Donate Now
+            </Button>
             <Button variant="primary" href="/getinvolved">
               Get Involved
             </Button>
@@ -47,7 +49,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative container mx-auto px-16 md:px-4 -mt-10 md:-mt-20">
+      <section className="relative container mx-auto px-6 md:px-4 -mt-10 md:-mt-20">
         <div className="max-w-6xl mx-auto bg-secondary px-6 py-12 md:py-16 rounded-3xl shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
             <div className="flex flex-col items-center text-center px-2">
