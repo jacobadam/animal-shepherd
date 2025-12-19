@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+
 import { Button } from "../components/ui/Button";
+import { HeroActionBox } from "../components/ui/HeroActionBox";
 
 export default function AboutPage() {
   return (
@@ -29,25 +31,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative z-10 -mt-12 px-6 lg:px-20 max-w-6xl mx-auto w-full">
-        <div className="bg-secondary p-8 md:p-12 rounded-3xl shadow-2xl text-center">
-          <h2 className="text-primary text-2xl md:text-3xl font-bold mb-6">
-            Who We Are
-          </h2>
-          <p className="text-primary/90 text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-            Animal Shepherd is a non-profit, no-kill animal rescue organization
-            committed to animals living with challenges that would otherwise
-            leave them without a chance. From rescue to rehabilitation, we
-            provide a no-cage sanctuary where they can live safely and free from
-            harm.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="primary" href="/getinvolved">
-              Get Involved
-            </Button>
-          </div>
-        </div>
-      </section>
+      <HeroActionBox
+        title="Who We Are"
+        description="Animal Shepherd is a non-profit, no-kill animal rescue organization committed to animals living with challenges that would otherwise leave them without a chance. From rescue to rehabilitation, we provide a no-cage sanctuary where they can live safely and free from harm."
+        buttonLabel="Get Involved"
+        buttonHref="/getinvolved"
+      />
 
       <section className="py-24 px-6 lg:px-20 max-w-5xl mx-auto">
         <header className="text-center mb-16">
