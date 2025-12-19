@@ -33,7 +33,7 @@ export const animals: Animal[] = [
     alt: "A gentle cat resting comfortably",
   },
   {
-    src: "/dog-39.webp",
+    src: "/dog-67.webp",
     alt: "A resilient rescue dog looking forward",
   },
   {
