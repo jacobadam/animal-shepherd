@@ -168,7 +168,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-xl">
             <Image
-              src="/owner-dogs.jpg"
+              src="/owner-dog-30.webp"
               alt="Founder of Animal Shepherd with a rescue animal"
               fill
               className="object-cover"
